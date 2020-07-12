@@ -1,0 +1,73 @@
+﻿@model kisiselWeb22.Models.Servi
+@{
+    ViewBag.Title = "ServisEkle";
+    Layout = "~/Views/_LayoutAdmin.cshtml";
+}
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            <a href="#" class="current">Tables</a>
+        </div>
+        <h1>Urun Ekleme</h1>
+        <div>
+            <h5>
+                <a href="/Admin/Servis" style="width:200px; height:30px; margin-left:10px;border: 2px solid #4CAF50;border-radius: 16px; padding-top:10px;"
+                   class="btn btn-info">Tabloyu Goruntule</a>
+            </h5>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <hr>
+
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon"> <i class="icon-th"></i> </span>
+                <h5>Static table</h5>
+            </div>
+            <span style="color:red;padding-top:5px; margin-left:5px;">( *  Bos Gecilemez )</span>
+            <form action="/Ekleme/ServisEkle" class="bg-light p-4 p-md-5 contact-form" method="post"style="margin-left:5px;">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @*                                <input type="text" class="form-control" placeholder="Resim1" name="Resim1">*@
+                    <label>Resim Yol<sapan style="color:red">*</sapan></label>
+                    @Html.TextBoxFor(m => m.ResimYol, new { @class = "form-control", style = "width:80%;" })
+                    @Html.ValidationMessageFor(m => m.ResimYol, null, new { @style = "color:red" })
+                </div>
+                <div class="form-group">
+                    @*<input type="text" class="form-control" placeholder="Resim2" name="Resim2">*@
+                    <label>Ad<sapan style="color:red">*</sapan></label>
+                    @Html.TextBoxFor(m => m.Ad, new { @class = "form-control", style = "width:80%;" })
+                    @Html.ValidationMessageFor(m => m.Ad, null, new { @style = "color:red" })
+                </div>
+                <div class="form-group">
+                    @*<input type="text" class="form-control" placeholder="Resim3" name="Resim3">*@
+                    <label>Kisa Aciklama<sapan style="color:red">*</sapan></label>
+                    @Html.TextBoxFor(m => m.KisaAciklama, new { @class = "form-control", style = "width:80%;" })
+                    @Html.ValidationMessageFor(m => m.KisaAciklama, null, new { @style = "color:red" })
+                </div>
+                <div class="form-group">
+                    @*<input type="text" class="form-control" placeholder="Resim4" name="Resim4">*@
+                    <label>Uzun Aciklama<sapan style="color:red">*</sapan></label>
+                    @Html.TextBoxFor(m => m.UzunAciklama, new { @class = "form-control", style = "width:80%;" })
+                    @Html.ValidationMessageFor(m => m.UzunAciklama, null, new { @style = "color:red" })
+                </div>
+
+                @*<div class="form-group">
+                <textarea name="messaj" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+            </div>*@
+                <div class="form-group">
+                    <input type="submit" value="Gonder" class="btn btn-primary py-3 px-5">
+                </div>
+            </form>
+
+
+        </div>
+
+
+    </div>
+</div>
+

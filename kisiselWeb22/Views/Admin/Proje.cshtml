@@ -1,0 +1,94 @@
+﻿@model List<kisiselWeb22.Models.Project>
+@{
+    ViewBag.Title = "Proje";
+    Layout = "~/Views/_LayoutAdmin.cshtml";
+}
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            <a href="#" class="current">Tables</a>
+        </div>
+        <h1>Proje Tablosu</h1>
+        <div>
+            <h5>
+                <a href="/Ekleme/ProjeEkle" style="width:200px; height:30px; margin-left:10px;border: 2px solid #4CAF50;border-radius: 16px; padding-top:10px;"
+                   class="btn btn-info">Eklem Formuna Git</a>
+            </h5>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <hr>
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon"> <i class="icon-th"></i> </span>
+                <h5>Static table</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-bordered table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Resim Yol</th>
+                            <th>Ad</th>
+                            <th>Kisa Aciklama</th>
+                          
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var i in Model)
+                        {
+                        <tr class="odd gradeX">
+                            @if (i.Id != 0)
+                            {
+                                <td>@i.Id</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.ResimYol != null)
+                            {
+                                <td>@i.ResimYol</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.KisaAd != null)
+                            {
+                                <td>@i.KisaAd</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.Aciklama != null)
+                            {
+                                <td>@i.Aciklama</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            <td><a href="/Admin/ProjeSil/@i.Id" class="btn btn-danger"style = "border-radius:10px;">Sil</a></td>
+                            @*<td><a href="/Guncelle/Proje/@i.Id" class="btn btn-success">Guncelle</a></td>*@
+                            <td>@Html.ActionLink("Guncelle", "ProjeGuncelle", new { id = i.Id }, new { @class = "btn btn-success", style = "border-radius:10px;" })</td>
+                        </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+

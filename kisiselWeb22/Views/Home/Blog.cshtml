@@ -1,0 +1,85 @@
+﻿@model List<kisiselWeb22.Models.Blog>
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<section class="ftco-section" id="blog-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Blog</h1>
+                <h2 class="mb-4">Bloglarim</h2>
+                <p>Basarili birisi olmak icin Buyuk Dusun ve Baskalari ile Iyi Gecin Basarili Insanlari Takip Et Hep</p>
+            </div>
+        </div>
+        <div class="row d-flex">
+            @foreach (var i in Model)
+            {
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="single.html" class="block-20" style="background-image: url(@Url.Content(i.ResimYol));">
+                    </a>
+                    <div class="text mt-3 float-right d-block">
+                        @if (i.KonuAd != null)
+                        {
+                        <h3 class="heading"><a href="single.html">@i.KonuAd</a></h3>}
+                        else { <span>Bos Alan</span>}
+                        <div class="d-flex align-items-center mb-3 meta">
+                            <p class="mb-0">
+                                @if (i.Tarih != null)
+                                {
+
+
+                                <span class="mr-2">@i.Tarih</span>}
+                                else {<span>Bos Alan</span> }
+                                <a href="#" class="mr-2">Admin</a>
+                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                            </p>
+                        </div>
+                        @if (i.KisaAciklama != null)
+                        {
+                        <p>@i.KisaAciklama</p>}
+                        else {<span>Bos Alan</span> }
+                    </div>
+                </div>
+            </div>
+            }
+            @*<div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="single.html" class="block-20" style="background-image: url('ronaldo/images/image_2.jpg');">
+                    </a>
+                    <div class="text mt-3 float-right d-block">
+                        <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                        <div class="d-flex align-items-center mb-3 meta">
+                            <p class="mb-0">
+                                <span class="mr-2">Sept. 12, 2019</span>
+                                <a href="#" class="mr-2">Admin</a>
+                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                            </p>
+                        </div>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry">
+                    <a href="single.html" class="block-20" style="background-image: url('ronaldo/images/image_3.jpg');">
+                    </a>
+                    <div class="text mt-3 float-right d-block">
+                        <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                        <div class="d-flex align-items-center mb-3 meta">
+                            <p class="mb-0">
+                                <span class="mr-2">Sept. 12, 2019</span>
+                                <a href="#" class="mr-2">Admin</a>
+                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                            </p>
+                        </div>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+    </div>
+</section>
+

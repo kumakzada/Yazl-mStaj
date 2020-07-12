@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kisiselwebModelStoreContainer" CdmEntityContainer="kisiselwebEntities">
+    <EntitySetMapping Name="BeceriOZs">
+      <EntityTypeMapping TypeName="kisiselwebModel.BeceriOZ">
+        <MappingFragment StoreEntitySet="BeceriOZ">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="UzmanlikYuzde" ColumnName="UzmanlikYuzde" />
+          <ScalarProperty Name="BirHaftada" ColumnName="BirHaftada" />
+          <ScalarProperty Name="BirAyda" ColumnName="BirAyda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="kisiselwebModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ResimYol" ColumnName="ResimYol" />
+          <ScalarProperty Name="KonuAd" ColumnName="KonuAd" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="KisaAciklama" ColumnName="KisaAciklama" />
+          <ScalarProperty Name="UzunAciklama" ColumnName="UzunAciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeneyimOZs">
+      <EntityTypeMapping TypeName="kisiselwebModel.DeneyimOZ">
+        <MappingFragment StoreEntitySet="DeneyimOZ">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Aralik" ColumnName="Aralik" />
+          <ScalarProperty Name="Alan" ColumnName="Alan" />
+          <ScalarProperty Name="Okul" ColumnName="Okul" />
+          <ScalarProperty Name="AciklamaKisa" ColumnName="AciklamaKisa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EgitimOZs">
+      <EntityTypeMapping TypeName="kisiselwebModel.EgitimOZ">
+        <MappingFragment StoreEntitySet="EgitimOZ">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Aralik" ColumnName="Aralik" />
+          <ScalarProperty Name="Alan" ColumnName="Alan" />
+          <ScalarProperty Name="Okul" ColumnName="Okul" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Iletisims">
+      <EntityTypeMapping TypeName="kisiselwebModel.Iletisim">
+        <MappingFragment StoreEntitySet="Iletisim">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="KonuBaslik" ColumnName="KonuBaslik" />
+          <ScalarProperty Name="Messaj" ColumnName="Messaj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OdullOZs">
+      <EntityTypeMapping TypeName="kisiselwebModel.OdullOZ">
+        <MappingFragment StoreEntitySet="OdullOZ">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Yil" ColumnName="Yil" />
+          <ScalarProperty Name="IlkKacinci" ColumnName="IlkKacinci" />
+          <ScalarProperty Name="FirmaAdi" ColumnName="FirmaAdi" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="kisiselwebModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ResimYol" ColumnName="ResimYol" />
+          <ScalarProperty Name="KisaAd" ColumnName="KisaAd" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servis">
+      <EntityTypeMapping TypeName="kisiselwebModel.Servi">
+        <MappingFragment StoreEntitySet="Servis">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ResimYol" ColumnName="ResimYol" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="KisaAciklama" ColumnName="KisaAciklama" />
+          <ScalarProperty Name="UzunAciklama" ColumnName="UzunAciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Galeris">
+      <EntityTypeMapping TypeName="kisiselwebModel.Galeri">
+        <MappingFragment StoreEntitySet="Galeri">
+          <ScalarProperty Name="ResimYol5" ColumnName="ResimYol5" />
+          <ScalarProperty Name="ResimYol4" ColumnName="ResimYol4" />
+          <ScalarProperty Name="ResimYol3" ColumnName="ResimYol3" />
+          <ScalarProperty Name="ResimYol2" ColumnName="ResimYol2" />
+          <ScalarProperty Name="ResimYol1" ColumnName="ResimYol1" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SosyalHesaps">
+      <EntityTypeMapping TypeName="kisiselwebModel.SosyalHesap">
+        <MappingFragment StoreEntitySet="SosyalHesap">
+          <ScalarProperty Name="Digerhesap2" ColumnName="Digerhesap2" />
+          <ScalarProperty Name="Digerhesap1" ColumnName="Digerhesap1" />
+          <ScalarProperty Name="Linkedin" ColumnName="Linkedin" />
+          <ScalarProperty Name="Youtube" ColumnName="Youtube" />
+          <ScalarProperty Name="Instagram" ColumnName="Instagram" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KullaniciBilgis">
+      <EntityTypeMapping TypeName="kisiselwebModel.KullaniciBilgi">
+        <MappingFragment StoreEntitySet="KullaniciBilgi">
+          <ScalarProperty Name="Kaciklama" ColumnName="Kaciklama" />
+          <ScalarProperty Name="Profil" ColumnName="Profil" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ZipKod" ColumnName="ZipKod" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Dtarih" ColumnName="Dtarih" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="kisiselwebModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

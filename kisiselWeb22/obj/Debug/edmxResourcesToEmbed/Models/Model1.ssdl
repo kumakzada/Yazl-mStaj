@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kisiselwebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BeceriOZ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="UzmanlikYuzde" Type="int" />
+    <Property Name="BirHaftada" Type="int" />
+    <Property Name="BirAyda" Type="int" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResimYol" Type="nvarchar" MaxLength="50" />
+    <Property Name="KonuAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tarih" Type="date" />
+    <Property Name="KisaAciklama" Type="nvarchar" MaxLength="100" />
+    <Property Name="UzunAciklama" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="DeneyimOZ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Aralik" Type="nvarchar" MaxLength="50" />
+    <Property Name="Alan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Okul" Type="nvarchar" MaxLength="50" />
+    <Property Name="AciklamaKisa" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="EgitimOZ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Aralik" Type="nvarchar" MaxLength="50" />
+    <Property Name="Alan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Okul" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Galeri">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResimYol1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResimYol2" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResimYol3" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResimYol4" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResimYol5" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Iletisim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="KonuBaslik" Type="nvarchar" MaxLength="50" />
+    <Property Name="Messaj" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="KullaniciBilgi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dtarih" Type="date" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZipKod" Type="int" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Profil" Type="nvarchar" MaxLength="100" />
+    <Property Name="Kaciklama" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pass" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OdullOZ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Yil" Type="nvarchar" MaxLength="50" />
+    <Property Name="IlkKacinci" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirmaAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResimYol" Type="nvarchar" MaxLength="50" />
+    <Property Name="KisaAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Servis">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResimYol" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="KisaAciklama" Type="nvarchar" MaxLength="100" />
+    <Property Name="UzunAciklama" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="SosyalHesap">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Facebook" Type="nvarchar" MaxLength="100" />
+    <Property Name="Instagram" Type="nvarchar" MaxLength="100" />
+    <Property Name="Youtube" Type="nvarchar" MaxLength="100" />
+    <Property Name="Linkedin" Type="nvarchar" MaxLength="100" />
+    <Property Name="Digerhesap1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Digerhesap2" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="kisiselwebModelStoreContainer">
+    <EntitySet Name="BeceriOZ" EntityType="Self.BeceriOZ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeneyimOZ" EntityType="Self.DeneyimOZ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EgitimOZ" EntityType="Self.EgitimOZ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Galeri" EntityType="Self.Galeri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Iletisim" EntityType="Self.Iletisim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KullaniciBilgi" EntityType="Self.KullaniciBilgi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OdullOZ" EntityType="Self.OdullOZ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Servis" EntityType="Self.Servis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SosyalHesap" EntityType="Self.SosyalHesap" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

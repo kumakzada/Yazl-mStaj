@@ -1,0 +1,149 @@
+﻿@model List<kisiselWeb22.Models.KullaniciBilgi>
+@{
+    ViewBag.Title = "KulBilgiler";
+    Layout = "~/Views/_LayoutAdmin.cshtml";
+}
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            <a href="#" class="current">Tables</a>
+        </div>
+        <h1>Tables</h1>
+        <div>
+            <h5>
+                <a href="/Ekleme/Index" style="width:200px; height:30px; margin-left:10px;border: 2px solid #4CAF50;border-radius: 16px; padding-top:10px;"
+                   class="btn btn-info">Kullanici Bilgi Ekle</a>
+            </h5>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <hr>
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon"> <i class="icon-th"></i> </span>
+                <h5>Static table</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-bordered table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ad</th>
+                            <th>Tarih</th>
+                            <th>Adress</th>
+                            <th>Kod</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Profil Resim</th>                      
+                            <th>Kisa Aciklama</th>
+                          
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var i in Model)
+                        {
+                        <tr class="odd gradeX">
+                            @if (i.Id != 0)
+                            {
+                                <td>@i.Id</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.Ad != null)
+                            {
+                                <td>
+                                    @i.Ad
+                                </td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.Dtarih != null)
+                            {
+
+                                <td>@i.Dtarih</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.Adress != null)
+                            {
+
+                                <td>@i.Adress</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.ZipKod != null)
+                            {
+
+                                <td>@i.ZipKod</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+
+                            @if (i.Email != null)
+                            {
+
+                                <td>@i.Email</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.Tel != null)
+                            {
+
+                                <td>@i.Tel</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.Profil != null)
+                            {
+
+                                <td>@i.Profil</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+
+                            @if (i.Kaciklama != null)
+                            {
+
+                                <td>@i.Kaciklama</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            <td><a href="/Admin/KulSil/@i.Id" class="btn btn-danger" style="border-radius:10px;">Sil</a></td>
+                            <td>@Html.ActionLink("Guncelle", "KulGuncelle", new {id=i.Id },new {@class= "btn btn-success",style="border-radius:10px;"})</td>
+                        </tr>
+
+                        }
+                 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+

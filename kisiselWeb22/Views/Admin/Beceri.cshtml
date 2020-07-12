@@ -1,0 +1,98 @@
+﻿@model List<kisiselWeb22.Models.BeceriOZ>
+@{
+    ViewBag.Title = "Beceri";
+    Layout = "~/Views/_LayoutAdmin.cshtml";
+}
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            <a href="#" class="current">Tables</a>
+        </div>
+        <h1>Beceri Tablosu</h1>
+    </div>
+    <div class="container-fluid">
+        <hr>
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon"> <i class="icon-th"></i> </span>
+                <h5>Static table</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-bordered table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ad</th>
+                            <th>uzmanlik Yuzdesi</th>
+                            <th>Bir Haftada</th>
+                            <th>Bir Ayda</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var i in Model)
+                        {
+                        <tr class="odd gradeX">
+                            @if (i.Id != 0)
+                            {
+                                <td>@i.Id</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.Ad != null)
+                            {
+                                <td>@i.Ad</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.UzmanlikYuzde != null)
+                            {
+                                <td>@i.UzmanlikYuzde</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.BirHaftada != null)
+                            {
+                                <td>@i.BirHaftada</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+                            @if (i.BirAyda != null)
+                            {
+                                <td>@i.BirAyda</td>
+                            }
+                            else
+                            {
+                                <td>NULL</td>
+                            }
+
+                            <td><a href="/Admin/BeceriSil/@i.Id" class="btn btn-danger"style = "border-radius:10px;" >Sil</a></td>
+                            @*<td><a href="/Guncelle/BeceriGun/@i.Id" class="btn btn-success">Guncelle</a></td>*@
+                            <td>@Html.ActionLink("Guncelle", "BeceriGuncelle", new { id = i.Id }, new { @class = "btn btn-success", style = "border-radius:10px;" })</td>
+
+                        </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+

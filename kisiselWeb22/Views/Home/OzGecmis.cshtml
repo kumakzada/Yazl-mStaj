@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "OzGecmis";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <nav id="navi">
+                    <ul>
+                        <li><a href="#page-1">Egitim</a></li>
+                        <li><a href="#page-2">Deneyime</a></li>
+                        <li><a href="#page-3">Becerilerim</a></li>
+                        <li><a href="#page-4">Odullerim</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-9">
+                <div id="page-1" class="page one">
+                    <h2 class="heading">Egitim</h2>
+                  @Html.Action("Egitim","Home")
+                </div>
+                <div id="page-2" class="page two">
+                    <h2 class="heading">Deneyimlerim</h2>
+                    @Html.Action("Deneyim","Home")
+                </div>
+                <div id="page-3" class="page three">
+                    <h2 class="heading">Yeteneklerim</h2>
+                    @Html.Action("Yetenek","Home")
+                </div>
+                <div id="page-4" class="page four">
+                    <h2 class="heading">Odulleim</h2>
+                    @Html.Action("Odul","Home")
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

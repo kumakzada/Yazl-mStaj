@@ -1,0 +1,107 @@
+﻿@model List<kisiselWeb22.Models.Servi>
+@{
+    ViewBag.Title = "Servis";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+
+<section class="ftco-section" id="services-section">
+    <div class="container-fluid px-md-5">
+        <div class="row justify-content-center py-5 mt-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Hizmetler</h1>
+                <h2 class="mb-4">Hizmetler</h2>
+                <p>Hedefine uasmak icin uzaklari yakin gormenkeriyor! Evet Uzaklari yakin gormeyi ogren...</p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var i in Model)
+            {
+                <div class="col-md-4 text-center d-flex ftco-animate">
+
+                    <a href="#" class="services-1 shadow">
+
+
+                        <span class="icon">
+                            <i class="flaticon-analysis"></i>
+                        </span>
+
+                        <div class="desc">
+                            @if (i.Ad != null)
+                            {
+                                <h3 class="mb-5">@i.Ad</h3>
+                            }
+                            else
+                            { <span>Bos Alan</span>}
+
+                            @if (i.KisaAciklama != null)
+                            {
+                                <p>@i.KisaAciklama</p>
+                            }
+                            else
+                            { <span>Bos Alan</span>}
+                        </div>
+
+                    </a>
+
+                </div>
+            }
+            @*<div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1 shadow">
+                    <span class="icon">
+                        <i class="flaticon-flasks"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Phtography</h3>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1 shadow">
+                    <span class="icon">
+                        <i class="flaticon-ideas"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Web Developer</h3>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1 shadow">
+                    <span class="icon">
+                        <i class="flaticon-innovation"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">App Developing</h3>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1 shadow">
+                    <span class="icon">
+                        <i class="flaticon-ux-design"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Branding</h3>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1 shadow">
+                    <span class="icon">
+                        <i class="flaticon-idea"></i>
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Product Strategy</h3>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </a>
+            </div>
+        </div>*@
+        </div>
+</section>
+

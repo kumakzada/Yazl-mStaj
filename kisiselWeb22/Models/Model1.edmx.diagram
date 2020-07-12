@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="65fbe313a7e54dd39e3d94dc6b5f5bdc" Name="Diagram1" ZoomLevel="87">
+        <EntityTypeShape EntityType="kisiselwebModel.BeceriOZ" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kisiselwebModel.Blog" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kisiselwebModel.DeneyimOZ" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kisiselwebModel.EgitimOZ" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kisiselwebModel.Iletisim" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kisiselwebModel.OdullOZ" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kisiselwebModel.Project" Width="1.5" PointX="10.375" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kisiselwebModel.Servi" Width="1.5" PointX="6.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kisiselwebModel.Galeri" Width="1.5" PointX="8.5" PointY="3.75" />
+        <EntityTypeShape EntityType="kisiselwebModel.SosyalHesap" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="kisiselwebModel.KullaniciBilgi" Width="1.5" PointX="4.625" PointY="3.375" />
+        <EntityTypeShape EntityType="kisiselwebModel.Login" Width="1.5" PointX="0.75" PointY="6.25" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

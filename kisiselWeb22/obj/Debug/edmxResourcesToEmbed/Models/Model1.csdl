@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kisiselwebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BeceriOZ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UzmanlikYuzde" Type="Int32" />
+    <Property Name="BirHaftada" Type="Int32" />
+    <Property Name="BirAyda" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResimYol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KonuAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="KisaAciklama" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UzunAciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DeneyimOZ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Aralik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Alan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Okul" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AciklamaKisa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EgitimOZ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Aralik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Alan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Okul" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Iletisim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KonuBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Messaj" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OdullOZ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yil" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IlkKacinci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResimYol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KisaAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Servi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResimYol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KisaAciklama" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UzunAciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="kisiselwebEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BeceriOZs" EntityType="Self.BeceriOZ" />
+    <EntitySet Name="Blogs" EntityType="Self.Blog" />
+    <EntitySet Name="DeneyimOZs" EntityType="Self.DeneyimOZ" />
+    <EntitySet Name="EgitimOZs" EntityType="Self.EgitimOZ" />
+    <EntitySet Name="Iletisims" EntityType="Self.Iletisim" />
+    <EntitySet Name="OdullOZs" EntityType="Self.OdullOZ" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="Servis" EntityType="Self.Servi" />
+    <EntitySet Name="Galeris" EntityType="kisiselwebModel.Galeri" />
+    <EntitySet Name="SosyalHesaps" EntityType="kisiselwebModel.SosyalHesap" />
+    <EntitySet Name="KullaniciBilgis" EntityType="kisiselwebModel.KullaniciBilgi" />
+    <EntitySet Name="Logins" EntityType="kisiselwebModel.Login" />
+  </EntityContainer>
+  <EntityType Name="Galeri">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResimYol1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ResimYol2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ResimYol3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ResimYol4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ResimYol5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SosyalHesap">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Instagram" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Youtube" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Linkedin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Digerhesap1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Digerhesap2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="KullaniciBilgi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dtarih" Type="DateTime" Precision="0" />
+    <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ZipKod" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Profil" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Kaciklama" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

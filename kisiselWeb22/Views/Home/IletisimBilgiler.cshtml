@@ -1,0 +1,79 @@
+﻿@model List<kisiselWeb22.Models.KullaniciBilgi>
+
+<div class="row d-flex contact-info mb-5">
+    @foreach (var i in Model)
+    {
+    <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+        <div class="align-self-stretch box text-center p-4 shadow">
+            <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+            </div>
+            <div>
+                <h3 class="mb-4">Address</h3>
+                @if (i.Adress != null)
+                {
+                <p>@i.Adress</p>
+                }
+                else
+                {
+                    <span>Bos Alan</span>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+        <div class="align-self-stretch box text-center p-4 shadow">
+            <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+            </div>
+            <div>
+                <h3 class="mb-4">Contact Number</h3>
+                @if (i.Tel != null)
+                {
+                <p><a href="tel://@i.Tel">+90 @i.Tel</a></p>
+                }
+                else
+                {
+                    <span>Bos Alan</span>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+        <div class="align-self-stretch box text-center p-4 shadow">
+            <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+            </div>
+            <div>
+                <h3 class="mb-4">Email Address</h3>
+                @if(i.Email != null) {
+
+                <p><a href="mailto:@i.Email">@i.Email</a></p>
+                }
+                else
+                {
+                    <span>Bos Alan</span>
+                }
+            </div>
+        </div>
+    </div>
+    @*<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+        <div class="align-self-stretch box text-center p-4 shadow">
+            <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+            </div>
+            <div>
+                <h3 class="mb-4">Website</h3>
+                @if (i.Diger != null)
+                {
+                <p><a href="#">@i.Diger</a></p>
+                }
+                else
+                {
+                    <span>Bos Alan</span>
+                }
+            </div>
+        </div>
+    </div>*@
+    }
+</div>

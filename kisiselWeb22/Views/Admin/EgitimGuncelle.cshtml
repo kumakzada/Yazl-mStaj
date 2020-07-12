@@ -1,0 +1,57 @@
+﻿@model kisiselWeb22.Models.EgitimOZ
+@{
+    ViewBag.Title = "EgitimGuncelle";
+    Layout = "~/Views/_LayoutAdmin.cshtml";
+}
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            <a href="~/Admin1/Index" class="current">Form</a>
+        </div>
+
+        <div>
+            <h5>
+                <a href="/Admin/Egitim" style="width:200px; height:30px; margin-left:10px;border: 2px solid #4CAF50;border-radius: 16px; padding-top:10px;"
+                   class="btn btn-info">Tabloya Git</a>
+            </h5>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <hr>
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon"> <i class="icon-th"></i> </span>
+                <h5>Static table</h5>
+            </div>
+
+            <form action="/Admin/EgitimGuncelle" method="post" class="bg-light p-4 p-md-5 contact-form" style="margin-left:5px;">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Id)<br />
+                    @Html.TextBoxFor(m => m.Id, new { @class = "form-control", style = "width:80%;" })
+
+                    @Html.LabelFor(m => m.Aralik)<br />
+                    @Html.TextBoxFor(m => m.Aralik, new { @class = "form-control", style = "width:80%;" })
+
+
+                    @Html.LabelFor(m => m.Alan)
+                    @Html.TextBoxFor(m => m.Alan, new { @class = "form-control", style = "width:80%;" })
+
+
+                    @Html.LabelFor(m => m.Okul)
+                    @Html.TextBoxFor(m => m.Okul, new { @class = "form-control", style = "width:80%;" })
+
+                    @Html.LabelFor(m => m.Aciklama)
+                    @Html.TextBoxFor(m => m.Aciklama, new { @class = "form-control", style = "width:80%;" })
+
+
+                </div>
+                <div> <input type="submit" class="btn btn-danger" value="Guncelle" /></div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+

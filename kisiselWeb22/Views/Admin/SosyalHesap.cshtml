@@ -1,0 +1,140 @@
+﻿@model List<kisiselWeb22.Models.SosyalHesap>
+@{
+    ViewBag.Title = "SosyalHesap";
+    Layout = "~/Views/_LayoutAdmin.cshtml";
+}
+@*@if (Model.Empty)
+{
+    <script type="text/javascript">
+        alert("model Empty")
+    </script>
+}*@
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            <a href="#" class="current">Tables</a>
+        </div>
+        <h1>Sosyal Hesap Tablosu</h1>
+        <div>
+            <h5>
+                <a href="/Ekleme/SosEkle" style="width:200px; height:30px; margin-left:10px;border: 2px solid #4CAF50;border-radius: 16px; padding-top:10px;"
+                   class="btn btn-info">Ekleme Formuna Git</a>
+            </h5>
+        </div>
+    </div>
+    @*@if (Model != null && Model.Count() != null)
+    {*@
+        <div class="container-fluid">
+            <hr>
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"> <i class="icon-th"></i> </span>
+                    <h5>Static table</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <table class="table table-bordered table-striped">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Facebook</th>
+                                <th>Instagram</th>
+                                <th>Youtube</th>
+                                <th>Linkedin</th>
+                                <th>Diger Hesap 1</th>
+                                <th>Diger Hesap 2</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var i in Model)
+                            {
+
+
+
+                            <tr class="odd gradeX">
+                                @if (i.Id != 0)
+                                {
+                                    <td>@i.Id</td>
+                                }
+                                else
+                                {
+                                    <td>NULL</td>
+                                }
+                                @if (i.Facebook != null)
+                                {
+                                    <td>@i.Facebook</td>
+                                }
+                                else
+                                {
+                                    <td>NULL</td>
+                                }
+                                @if (i.Instagram != null)
+                                {
+                                    <td>@i.Instagram</td>
+                                }
+                                else
+                                {
+                                    <td>NULL</td>
+                                }
+                                @if (i.Youtube != null)
+                                {
+                                    <td>@i.Youtube</td>
+                                }
+                                else
+                                {
+                                    <td>NULL</td>
+                                }
+                                @if (i.Linkedin != null)
+                                {
+                                    <td>@i.Linkedin</td>
+                                }
+                                else
+                                {
+                                    <td>NULL</td>
+                                }
+                                @if (i.Digerhesap1 != null)
+                                {
+                                    <td>@i.Digerhesap1</td>
+                                }
+                                else
+                                {
+                                    <td>NULL</td>
+                                }
+                                @if (i.Digerhesap2 != null)
+                                {
+                                    <td>@i.Digerhesap2</td>
+                                }
+                                else
+                                {
+                                    <td>NULL</td>
+                                }
+
+                                <td><a href="/Admin/SosSil/@i.Id" class="btn btn-danger" style = "border-radius:10px;">Sil</a></td>
+                                <td><a href="/Admin/SosGuncelle/@i.Id" class="btn btn-success" style = "border-radius:10px;">Guncelle</a></td>
+
+                            </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    @*}*@
+    @*else
+    {
+        <h1>Model Bos Geldi</h1>
+    }*@
+    </div>
+
+

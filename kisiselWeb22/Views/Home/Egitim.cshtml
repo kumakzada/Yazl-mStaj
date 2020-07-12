@@ -1,0 +1,79 @@
+﻿@model List<kisiselWeb22.Models.EgitimOZ>
+
+<div class="resume-wrap d-flex ftco-animate">
+    <div class="icon d-flex align-items-center justify-content-center">
+        <span class="flaticon-ideas"></span>
+    </div>
+    <div class="text pl-3">
+        @foreach (var item in Model)
+        {
+            if (item.Aralik != null)
+            {
+              <span class="date">@item.Aralik</span>
+            }
+            else
+            {
+                <span>Bos Alan</span>
+            }
+            if (item.Alan != null)
+            {
+             <h2>@item.Alan</h2>
+            }
+            else
+            {
+                <span>Bos Alan</span>
+            }
+            if (item.Okul != null)
+            {
+             <span class="position">@item.Okul</span>
+            }
+            else
+            {
+                <span>Bos Alan</span>
+            }
+            if(item.Aciklama != null)
+            {
+
+              <p>@item.Aciklama</p>
+
+            }
+            else
+            {
+                <span>Bos Alan</span>
+            }
+        }
+    </div>
+</div>
+@*<div class="resume-wrap d-flex ftco-animate">
+    <div class="icon d-flex align-items-center justify-content-center">
+        <span class="flaticon-ideas"></span>
+    </div>
+    <div class="text pl-3">
+        <span class="date">2014-2015</span>
+        <h2>Computer Processing Systems/Computer Software</h2>
+        <span class="position">Cambridge University</span>
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    </div>
+</div>
+<div class="resume-wrap d-flex ftco-animate">
+    <div class="icon d-flex align-items-center justify-content-center">
+        <span class="flaticon-ideas"></span>
+    </div>
+    <div class="text pl-3">
+        <span class="date">2014-2015</span>
+        <h2>Diploma in Computer</h2>
+        <span class="position">Cambridge University</span>
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    </div>
+</div>
+<div class="resume-wrap d-flex ftco-animate">
+    <div class="icon d-flex align-items-center justify-content-center">
+        <span class="flaticon-ideas"></span>
+    </div>
+    <div class="text pl-3">
+        <span class="date">2014-2015</span>
+        <h2>Art &amp; Creative Director</h2>
+        <span class="position">Cambridge University</span>
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    </div>
+</div>*@
